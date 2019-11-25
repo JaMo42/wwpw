@@ -1,28 +1,3 @@
-
-/** @mainpage Windows Window Procedure Wrapper
- * An oject-oriented wrapper for the Windows window procedure.
- * @section usage Usage
- * @subsection def_class Defining your window class
- * <pre>{@code
- * class MyWindow : WindowBase<MyWindow> {
- * public:
- *     LRESULT CALLBACK HandleMessage(UINT Message, WPARAM WParam, LPARAM LParam) override {
- *         // Handle messages here
- *     }
- * 
- *     constexpr static LPCTSTR ClassName = "my_window_class";
- * };
- * }</pre>
- * @subsubsection wnd_proc The HandleMessages function
- * This replaces WindowProc function, the parameters <code>Message</code>, 
- * <code>WParam</code> and <code>LParam</code> are the same parameters passed to the
- * internal WindowProc function.
- * The window handle is not passed as a parameter as it can be accessed as a member
- * of the class.
- * @subsubsection class_name The ClassName variable.
- * This defines the name of the window class. This does not have to be unique
- * accross mutiple window classes.
- */
 #pragma once
 #include <Windows.h>
 
