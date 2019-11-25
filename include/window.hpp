@@ -115,7 +115,6 @@ protected:
 	 */
 	virtual LRESULT CALLBACK HandleMessage(UINT Message, WPARAM WParam, LPARAM LParam) = 0;
 
-protected:
 	// The window handle of the window.
 	HWND Handle;
 };
