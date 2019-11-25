@@ -1,6 +1,6 @@
 # Windows Window Procedure Wrapper
 
-An object-oriented wrapper for the windows window procedure.
+A object-oriented wrapper for the windows window procedure.
 
 ## Usage
 
@@ -21,12 +21,12 @@ public:
 
 #### The HandleMessage function
 
-This replaces the WindowProc function. The parameters `Message`, `WParam` and `LParam` are the parameter passed to the internal WindowProc function.
+This replaces the WindowProc function. The parameters `Message`, `WParam` and `LParam` are the parameters passed to the internal WindowProc function.
 The window handle is not passed as an argument as it can be accessed as a member of the window class.
 
 #### The ClassName value
 
-This defines the name of the window class the window uses. This does not have to be unique accross multiple window classes.
+This defines the name of the window class the window uses. This does not have to be unique across multiple window classes.
 
 ### Creating a window
 
@@ -34,7 +34,7 @@ Example:
 
 ```
 Window wnd;
-CreateStruct params = {...};
+ww::CreateStruct params = {...};
 wnd.Create(params);
 wnd.Show(nCmdShow);
 ```
@@ -44,7 +44,7 @@ Creates the window with the given parameters.
 
 #### WindowBase::Show(int CmdShow)
 Shows the window in the given show mode.
-The first time this is called this should be the  `nCmdShow` parameter passed obtained by the `WinMain`.
+The first time this is called this should be the `nCmdShow` parameter passed obtained by the `WinMain`.
 For more information about this value see the [ShowWindow](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-showwindow) documentation.
 
 ### The CreateStruct
@@ -73,4 +73,4 @@ Fields:
 - `Parent` - The parent window
 - `Style` - The window style
 - `Menu` - The menu to use
-- `ExStyle` - Extra style information
+- `ExStyle` - The extended window style
